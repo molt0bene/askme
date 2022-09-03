@@ -50,6 +50,7 @@ class UsersController < ApplicationController
 
   def authorize_user
     redirect_with_alert unless current_user == @user
+    debugger
   end
 
   def user_params
