@@ -1,24 +1,40 @@
-# README
+# AskMe
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Веб-приложение для анонимных вопросов и ответов в стиле AskFM.
 
-Things you may want to cover:
+## Стек
+- Ruby 2.7
+- Ruby on Rails 5.2
+- HTML/CSS
+- JavaScript
 
-* Ruby version
+## Возможности
+- регистрация и аутентификация пользователей
+- создание и публикация вопросов
+- ответы на вопросы
+- скрытие вопросов
+- хэштеги и группировка вопросов по тегам
+- валидация пользовательских данных
 
-* System dependencies
+## Архитектура
+Основные сущности приложения:
+- User
+- Question
+- Hashtag
 
-* Configuration
+Хэштеги автоматически извлекаются из текста вопроса и ответа и связываются с вопросом после создания или обновления записи.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Запуск
+1. Установить зависимости: 
+  ```
+  gem install bundler
+  bundle install
+  ```
+2. Создать и инициализировать базу данных
+```
+bundle exec db:create db:migrate
+```
+3. Запустить сервер Rails
+```
+bundle exec rails s
+```
